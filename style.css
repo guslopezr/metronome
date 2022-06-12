@@ -1,0 +1,198 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.container {
+  background-color: #323232;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.metronome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 300px;
+  background-color: #f0f0f0;
+  height: 350px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2%;
+}
+
+.metronome .bpm-display {
+  width: 100%;
+  color: #ff6600;
+  text-align: center;
+  font-weight: bold;
+}
+
+.metronome .bpm-display .tempo {
+  font-size: 4em;
+}
+
+.metronome .beats-per-measure-text {
+  text-align: center;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
+/*reconfiguración del slider del metrónomo*/
+input[type=range] {
+  -webkit-appearance: none;
+  background-color: transparent;
+  width: 70%;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ff6600;
+  cursor: pointer;
+  margin-top: -10px;
+}
+
+input[type=range]::-moz-range-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ff6600;
+  cursor: pointer;
+  border: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 1px;
+  background: #ddd;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 1px;
+  background: #ddd;
+}
+
+/*fin reconfiguración del slider del metrónomo*/
+.tempo-text {
+  font-size: .8em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.temposettings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.temposettings .adjust-tempo-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+
+.temposettings .adjust-tempo-btn:hover {
+  background-color: #ff6600;
+  color: white;
+}
+
+.temposettings .decrease-tempo {
+  font-size: 40px;
+  line-height: 25px;
+}
+
+.temposettings .increase-tempo {
+  font-size: 40px;
+  line-height: 30px;
+}
+
+.start-stop {
+  width: 50px;
+  height: 50px;
+  font-size: 0.7em;
+  font-weight: bolder;
+  text-align: center;
+  background-color: #ff6600;
+  color: white;
+  border-radius: 50%;
+  line-height: 50px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.start-stop:hover {
+  background-color: green;
+}
+
+.measures {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.measures .stepper {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #525252;
+  text-align: center;
+  margin: 0 5px;
+  line-height: 20px;
+}
+
+.measures .stepper:hover {
+  background-color: #ff6600;
+  color: white;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */
