@@ -1,4 +1,4 @@
-import Timer from './timer.js'
+import Timer from './timer.js';
 
 /* constants definition*/
 
@@ -77,14 +77,14 @@ function updateMetronome() {
     tempoDisplay.textContent = bpm;
     tempoSlider.value = bpm;
     metronome.timeInterval = 60000 / bpm;
-    if (bpm <= 40) { tempoTextString = "Super Slow" };
-    if (bpm > 40 && bpm < 80) { tempoTextString = "Slow" };
-    if (bpm > 80 && bpm < 120) { tempoTextString = "Getting there" };
-    if (bpm > 120 && bpm < 180) { tempoTextString = "Nice and Steady" };
-    if (bpm > 180 && bpm < 220) { tempoTextString = "Rock n' Roll" };
-    if (bpm > 220 && bpm < 240) { tempoTextString = "Funky Stuff" };
-    if (bpm > 240 && bpm < 260) { tempoTextString = "Relax Dude" };
-    if (bpm > 260 && bpm <= 280) { tempoTextString = "Eddie Van Halen" };
+    if (bpm <= 40) { tempoTextString = "Muy lento" };
+    if (bpm > 40 && bpm < 80) { tempoTextString = "Lento" };
+    if (bpm > 80 && bpm < 120) { tempoTextString = "Relajado" };
+    if (bpm > 120 && bpm < 180) { tempoTextString = "Firme" };
+    if (bpm > 180 && bpm < 220) { tempoTextString = "Movido" };
+    if (bpm > 220 && bpm < 240) { tempoTextString = "Enérgico" };
+    if (bpm > 240 && bpm < 260) { tempoTextString = "Corriendo" };
+    if (bpm > 260 && bpm <= 280) { tempoTextString = "Afírmate" };
 
     tempoText.textContent = tempoTextString;
 
@@ -110,7 +110,4 @@ function playClick() {
     count++;
 }
 
-const metronome = new Timer(playClick, 60000 / bpm, { inmediate: tue });
-
-
-metronome.start();
+const metronome = new Timer(playClick, 60000 / bpm, { inmediate: true });
